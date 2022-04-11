@@ -86,7 +86,7 @@ for epoch in range(num_epochs):
         optimizer.step()
         
         if (i+1) % 10 == 0:
-            print ("Epoch[{}/{}], Step [{}/{}], Reconst Loss: {:.4f}, KL Div: {:.4f}" 
+            print("Epoch[{}/{}], Step [{}/{}], Reconst Loss: {:.4f}, KL Div: {:.4f}"
                    .format(epoch+1, num_epochs, i+1, len(data_loader), reconst_loss.item(), kl_div.item()))
     
     with torch.no_grad():
