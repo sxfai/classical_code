@@ -7,6 +7,8 @@ from torchvision import transforms
 from torchvision.utils import save_image
 
 
+
+
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -28,6 +30,7 @@ dataset = torchvision.datasets.MNIST(root='../../data',
                                      train=True,
                                      transform=transforms.ToTensor(),
                                      download=True)
+
 
 # Data loader
 data_loader = torch.utils.data.DataLoader(dataset=dataset,
